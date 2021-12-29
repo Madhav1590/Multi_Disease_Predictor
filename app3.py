@@ -23,7 +23,7 @@ def app():
 
     patient_data = pd.DataFrame([[age, gender, total_bilirubin, direct_bilirubin, ak, alamine, aspartate_atf, total_proteins, albumin, a_g_ratio]], columns=['Age', 'Gender', 'Total_Bilirubin', 'Direct_Bilirubin', 'Alkaline_Phosphotase', 'Alamine_Aminotransferase', 'Aspartate_Aminotransferase', 'Total_Proteins', 'Albumin', 'Albumin_and_Globulin_Ratio'])
 
-    pickle_in = open('Liver_model', 'rb')
+    pickle_in = open('Liver_model.pkl', 'rb')
     classifier = pickle.load(pickle_in)
 
     result = classifier.predict(patient_data)
