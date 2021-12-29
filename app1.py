@@ -20,7 +20,7 @@ def app():
 
     patient_data = pd.DataFrame([[pregnancy, glucose, bp, skin, insulin, bmi, dpf, age]], columns=['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age'])
 
-    pickle_in = open('Diabetes_model', 'rb')
+    pickle_in = open('Diabetes_model.pkl', 'rb')
     classifier = pickle.load(pickle_in)
 
     result = classifier.predict(patient_data)
