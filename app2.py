@@ -25,7 +25,7 @@ def app():
 
     patient_data = pd.DataFrame([[age, sex, cp, restbps, cholestrol, fbs, rest_ecg, max_hr, angina, oldpeak, slope, ca, thal]], columns=['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal'])
 
-    pickle_in = open('Heart_model', 'rb')
+    pickle_in = open('Heart_model.pkl', 'rb')
     classifier = pickle.load(pickle_in)
 
     result = classifier.predict(patient_data)
